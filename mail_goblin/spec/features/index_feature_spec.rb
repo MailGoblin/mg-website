@@ -7,4 +7,11 @@ feature 'index page' do
       expect(page).to have_content 'Nothing has been added'
     end
   end
+
+  context 'content has been added' do
+    scenario 'display content' do
+      visit '/'
+      expect(page).to have_link 'Homepage'
+    end
+  end
 end
